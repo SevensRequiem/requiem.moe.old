@@ -1,0 +1,14 @@
+body,
+.intro-header {
+    background: url(../assets/gm1.gif) repeat center center;
+    background-size: repeat;
+}
+.gm1 {
+    display: grid;
+    height: 100%;
+}
+.gm2 {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}

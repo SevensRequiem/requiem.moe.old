@@ -1,0 +1,96 @@
+<html>
+	<head>
+           <!-- <PageMap>
+                    <DataObject type="document">
+                       <Attribute name="title">Games</Attribute>
+                       <Attribute name="description">requiem's fav games</Attribute>
+                    </DataObject>
+                    <DataObject type="thumbnail">
+                       <Attribute name="src" value="https://sevens.gq/assets/thumbnail.jpg" />
+                       <Attribute name="width" value="385" />
+                       <Attribute name="height" value="385" />
+                    </DataObject>
+                 </PageMap>-->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135043178-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135043178-1');
+</script>
+<link href="css/games.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	</head>
+    <!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <!-- audio -->
+    <audio id="audioplayer"> <!-- Remove the "Controls" Attribute if you don't want the visual controls -->
+    </audio>
+    
+    <script>
+        var lastSong = null;
+        var selection = null;
+        var playlist = ["assets/sunshine.mp3", "assets/kill_me.mp3", "assets/leave_me_alone.mp3", "assets/october.mp3", "assets/sheep.mp3", "assets/filth.mp3", "assets/razor.mp3", "assets/king.mp3"]; // List of Songs
+        var player = document.getElementById("audioplayer"); // Get Audio Element
+        player.volume = 0.1;
+        player.autoplay=true;
+        player.addEventListener("ended", selectRandom); // Run function when song ends
+    
+        function selectRandom(){
+            while(selection == lastSong){ // Repeat until different song is selected
+                selection = Math.floor(Math.random() * playlist.length);
+            }
+            lastSong = selection; // Remember last song
+            player.src = playlist[selection]; // Tell HTML the location of the new Song
+        }
+        selectRandom(); // Select initial song
+        player.play(); // Start Song
+    </script>
+<script language="JavaScript">
+    var space = " ";
+    var speed = "250";
+    var pos = 0;
+    var msg = "r e q u i e m - g a m e s -";
+    function Scroll()
+    {
+    document.title = msg.substring(pos, msg.length) + space + msg.substring(0,pos);
+    pos++;
+    if (pos > msg.length) pos = 0;
+    window.setTimeout("Scroll()", speed);
+    }
+    Scroll();
+    </script>
+	<style>
+    body, a, a:link{cursor:url(assets/cursor.cur), default;} a:hover {cursor:url(assets/cursor.cur),pointer;}
+    </style>
+        <div id="center_wrap">
+            <div id="t1">fav games</div>
+	        <div id="a1">
+	        <a href="https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/" target="_blank">TESV: Skyrim</a>
+	        </div>
+	        <div id="a2">
+	        <a href="https://store.steampowered.com/app/524220/NieRAutomata/" target="_blank">Nier Automata</a>
+            </div>
+            <div id="a3">
+                <a href="https://store.steampowered.com/app/6920/Deus_Ex_Invisible_War/" target="_blank">Deus Ex: Invisible War</a>
+                </div>
+                <div id="a4">
+                    <a href="https://store.steampowered.com/app/502500/ACE_COMBAT_7_SKIES_UNKNOWN/" target="_blank">Ace Combat 7</a>
+                    </div>
+                <div id="a5">
+                    <a href="https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/" target="_blank">Hearts of Iron 4</a>
+                    </div>
+                    <div id="a6">
+                            <a href="https://store.steampowered.com/app/236390/War_Thunder/" target="_blank">War Thunder</a>
+                        </div>
+            <div id="back">
+                <a href="http://sevens.gq/about">back</a>
+                </div>
+	</body>
+</html>
+
+

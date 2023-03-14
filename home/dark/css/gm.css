@@ -1,0 +1,14 @@
+body,
+.body {
+    background: url('../assets/gm/gm1.gif');
+    background-repeat:repeat;
+}
+.gm1 {
+    display: grid;
+    height: 100%;
+}
+.gm2 {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}

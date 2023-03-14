@@ -1,0 +1,90 @@
+<html>
+	<head>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135043178-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'UA-135043178-1');
+            </script>
+		<title>Error: 404</title>
+<link href="css/404.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <!-- audio -->
+ <audio id="audioplayer"> <!-- Remove the "Controls" Attribute if you don't want the visual controls -->
+ </audio>
+<script>
+  var lastSong = null;
+  var selection = null;
+  var playlist = ["media/speak.mp3", "media/flannel.mp3", "media/end.mp3", "media/black.mp3", "media/bad.mp3", "media/stolen.mp3", "media/bdhabits.mp3", "media/bulletproof.mp3"]; // List of Songs
+  var player = document.getElementById("audioplayer"); // Get Audio Element
+  
+  player.volume = 0.1;
+  player.autoplay=true;
+  player.addEventListener("ended", selectRandom); // Run function when song ends
+
+  function selectRandom(){
+      while(selection == lastSong){ // Repeat until different song is selected
+          selection = Math.floor(Math.random() * playlist.length);
+      }
+      lastSong = selection; // Remember last song
+      player.src = playlist[selection]; // Tell HTML the location of the new Song
+  }
+  selectRandom(); // Select initial song
+  player.play(); // Start Song
+</script>
+
+<body oncontextmenu="return false" onselectstart="return false" onselect="return false" oncopy="return false" ondragstart="return false" ondrag="return false">
+  <div class="video-container">
+    <video autoplay="autoplay" loop="loop">
+      <source src="media/vid.mp4" type="video/mp4">
+    </video>
+  </div>
+    </head>
+    <body>
+            <div id="clockDisplay" class="clockStyle"></div>
+            <script>
+            function renderTime() {
+            var currentTime = new Date();
+            var diem = "am";
+            var h = currentTime.getHours();
+            var m = currentTime.getMinutes();
+            var s = currentTime.getSeconds();
+            setTimeout('renderTime()',1000);
+            if (h == 0) {
+              h = 12;
+            } else if (h > 12) { 
+              h = h - 12;
+              diem="pm";
+            }
+            if (h < 10) {
+              h = "0" + h;
+            }
+            if (m < 10) {
+              m = "0" + m;
+            }
+            if (s < 10) {
+              s = "0" + s;
+            }
+            var myClock = document.getElementById('clockDisplay');
+            myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+            myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+            }
+            renderTime();
+            </script>		
+    <!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+        <div id="center_wrap">
+			<div id="t1">Error: 404</div>
+			<div id="text">This page is still under construction, or is no longer available!</div>
+            <div id="home">
+                <a href="javascript:history.back()">return</a>
+                </div>
+	</body>
+</html>
+    <!--made by requiem#0666-->
+
+

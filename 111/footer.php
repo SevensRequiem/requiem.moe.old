@@ -1,0 +1,1 @@
+<div class="footer"><a href="https://xaturing.live">xaturing.live</a> by <a href="https://requiem.moe">requiem</a></div>

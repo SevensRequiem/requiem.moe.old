@@ -1,0 +1,1 @@
+<div class="footer">powered by <a href="https://sevens.gq">requiem</a> 	&#169; 2020 - COMING SOON</div>

@@ -1,0 +1,73 @@
+<head>
+  <link rel="prerender" href="home.php" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> <meta http-equiv="Pragma" content="no-cache" /> <meta http-equiv="Expires" content="0" />
+<link rel="stylesheet" href="css/load.css">
+<title></title>
+    <!--AUDIO-->
+<audio autoplay loop id="p">  
+        <source src="assets/load/p.mp3" type="audio/mp3">  
+</audio>  
+<script>
+  var audio = document.getElementById("g");
+  audio.volume = 0.8;
+</script>
+<script>
+    var rev = "fwd";
+    function titlebar(val){
+        var msg  = "404: Not found";
+        var res = " ";
+        var speed = 300;
+        var pos = val;
+        msg = msg;
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+</script>
+  </head>
+  <body>
+    <div class="terminal glitch">
+        <div class="scanline"></div>
+        <p class="spinner">[/]</p>
+        <div class="hydra">
+            <div class="hydra_rebooting">
+                <p>&lt; error 404 &gt;</p>
+                <p class="text--sm">Not found</p>
+                <p class="text--sm">returning: <span class="process-amount">0</span>%</p>
+                <p class="loading-bar"></p>
+            </div>
+            <div class="glitch2 bold">
+            <div class="hydra_reboot_success hidden">
+                <p>666</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/load.js"></script>
+    <canvas class="grain"></canvas>
+<script src="js/grain.js"></script>
+</body>

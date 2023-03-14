@@ -1,0 +1,72 @@
+<html>
+	<head>
+            <!--<PageMap>
+                    <DataObject type="document">
+                       <Attribute name="title">A Requiem For Sevens About</Attribute>
+                       <Attribute name="description">aboutpage of sevens</Attribute>
+                    </DataObject>
+                    <DataObject type="thumbnail">
+                       <Attribute name="src" value="https://sevens.gq/assets/thumbnail.jpg" />
+                       <Attribute name="width" value="385" />
+                       <Attribute name="height" value="385" />
+                    </DataObject>
+                 </PageMap>-->
+<link href="css/about.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body oncontextmenu="return false" onselectstart="return false" onselect="return false" oncopy="return false" ondragstart="return false" ondrag="return false">
+        <div class="video-container">
+            <video autoplay="autoplay" loop="loop">
+              <source src="assets/vid/3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <canvas id="canvas" width="800" height="350"></canvas>
+        
+        <div id="clockDisplay" class="clockStyle"></div>
+        <div id="version">site version 0.3</div>
+          <script>
+          function renderTime() {
+          var currentTime = new Date();
+          var diem = "am";
+          var h = currentTime.getHours();
+          var m = currentTime.getMinutes();
+          var s = currentTime.getSeconds();
+          setTimeout('renderTime()',1000);
+          if (h == 0) {
+            h = 12;
+          } else if (h > 12) { 
+            h = h - 12;
+            diem="pm";
+          }
+          if (h < 10) {
+            h = "0" + h;
+          }
+          if (m < 10) {
+            m = "0" + m;
+          }
+          if (s < 10) {
+            s = "0" + s;
+          }
+          var myClock = document.getElementById('clockDisplay');
+          myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+          myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+          }
+          renderTime();
+          </script>		
+        <div id="center_wrap">
+            <div id="container">
+                <div id="message">
+                  <a id="animate" href="#"></a>
+                </div>
+              </div>
+            <div id="back">
+                <a href="hub">back</a>
+                </div>
+                <script src='assets/about/jquery.min.js'></script><script  src="assets/about/script.js"></script>
+	</body>
+</html>
+    <!--made by requiem!#0666-->
+    <!--I hate modern web design-->
+    <!--If you steal code/my site(s), you a bitch-->
+

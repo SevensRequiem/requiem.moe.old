@@ -1,0 +1,146 @@
+<html>
+	<head>
+<link href="css/music.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	</head>
+<!-- audio -->
+<audio id="audioplayer"> <!-- Remove the "Controls" Attribute if you don't want the visual controls -->
+</audio>
+<script>
+ var lastSong = null;
+ var selection = null;
+ var playlist = ["assets/main/speak.mp3", "assets/main/flannel.mp3", "assets/main/end.mp3", "assets/main/black.mp3", "assets/main/bad.mp3", "assets/main/stolen.mp3", "assets/main/bdhabits.mp3", "assets/main/bulletproof.mp3"]; // List of Songs
+ var player = document.getElementById("audioplayer"); // Get Audio Element
+ 
+ player.volume = 0.1;
+ player.autoplay=true;
+ player.addEventListener("ended", selectRandom); // Run function when song ends
+
+ function selectRandom(){
+     while(selection == lastSong){ // Repeat until different song is selected
+         selection = Math.floor(Math.random() * playlist.length);
+     }
+     lastSong = selection; // Remember last song
+     player.src = playlist[selection]; // Tell HTML the location of the new Song
+ }
+ selectRandom(); // Select initial song
+ player.play(); // Start Song
+</script>
+
+<body oncontextmenu="return false" onselectstart="return false" onselect="return false" oncopy="return false" ondragstart="return false" ondrag="return false">
+   <div class="video-container">
+       <video autoplay="autoplay" loop="loop" muted>
+         <source src="assets/vid/2.mp4" type="video/mp4">
+       </video>
+     </div>
+     <canvas id="canvas" width="800" height="350"></canvas>
+   
+   <div id="clockDisplay" class="clockStyle"></div>
+   <div id="version">site version 0.3</div>
+     <script>
+     function renderTime() {
+     var currentTime = new Date();
+     var diem = "am";
+     var h = currentTime.getHours();
+     var m = currentTime.getMinutes();
+     var s = currentTime.getSeconds();
+     setTimeout('renderTime()',1000);
+     if (h == 0) {
+       h = 12;
+     } else if (h > 12) { 
+       h = h - 12;
+       diem="pm";
+     }
+     if (h < 10) {
+       h = "0" + h;
+     }
+     if (m < 10) {
+       m = "0" + m;
+     }
+     if (s < 10) {
+       s = "0" + s;
+     }
+     var myClock = document.getElementById('clockDisplay');
+     myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+     myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+     }
+     renderTime();
+     </script>		
+        <div id="center_wrap">
+            <div id="t1" class="rgb-text">some music i like</div>
+	        <div id="a1">
+	        <a href="https://www.youtube.com/watch?v=yvs-z-0tTOo" target="_blank">Absurd</a>
+	        </div>
+	        <div id="a2">
+	        <a href="https://www.youtube.com/watch?v=SC6DvbEVHcI" target="_blank">Bathory</a>
+            </div>
+            <div id="a3">
+                <a href="https://www.youtube.com/watch?v=d-Ou8Gbl8_w" target="_blank">Blutlinie</a>
+                </div>
+                <div id="a4">
+                    <a href="https://www.youtube.com/watch?v=TQOwFS7pLhk" target="_blank">Breaking Benjamin</a>
+                    </div>
+                    <div id="a5">
+                            <a href="https://www.youtube.com/watch?v=e-ZVkESecXk" target="_blank">Burzum</a>
+                        </div>
+                        <div id="a6">
+                            <a href="https://www.youtube.com/watch?v=ni5mIBdNW2w" target="_blank">Demon Hunter</a>
+                            </div>
+                            <div id="a7">
+                                <a href="https://www.youtube.com/watch?v=T2-0T3ZWN4w" target="_blank">DenKare</a>
+                                </div>
+                                <div id="a8">
+                                    <a href="https://www.youtube.com/watch?v=30_tqxCHqFw" target="_blank">Evanescense</a>
+                                    </div>
+                                    <div id="a9">
+                                        <a href="https://www.youtube.com/watch?v=tPayQuTuZWo" target="_blank">Fields Of The Nephilim</a>
+                                        </div>
+                                        <div id="a10">
+                                                <a href="https://www.youtube.com/watch?v=4CSFkjPm0A0" target="_blank">Ghost</a>
+                                                </div>
+                                                <div id="a11">
+                                                        <a href="https://www.youtube.com/watch?v=9SSUQxGjZZ4" target="_blank">Godsmack</a>
+                                                        </div>
+                                                        <div id="a12">
+                                                                <a href="https://www.youtube.com/watch?v=5IhwJvvJ2VA" target="_blank">LiL PEEP</a>
+                                                                </div>
+                                                                <div id="a13">
+                                                                        <a href="https://www.youtube.com/watch?v=Hiu1hPdJk-Y" target="_blank">Powerwolf</a>
+                                                                        </div>
+                                                                        <div id="a14">
+                                                                                <a href="https://www.youtube.com/watch?v=BvsMPOfblfg" target="_blank">Rob Zombie</a>
+                                                                                </div>
+                                                                                <div id="a15">
+                                                                                        <a href="https://www.youtube.com/watch?v=5T6vdak5Qoo" target="_blank">Slipknot</a>
+                                                                                        </div>
+                                                                                        <div id="a16">
+                                                                                                <a href="https://www.youtube.com/watch?v=a61A0T3y688" target="_blank">Swallow The Sun</a>
+                                                                                                </div>
+                                                                                                <div id="a17">
+                                                                                                        <a href="https://www.youtube.com/watch?v=miFhwa1_fwE" target="_blank">Three Days Grace</a>
+                                                                                                        </div>
+                                                                                                        <div id="a18">
+                                                                                                                <a href="https://www.youtube.com/watch?v=2xV93TlPv1M" target="_blank">Tool</a>
+                                                                                                                </div>
+                                                                                                                <div id="a19">
+                                                                                                                        <a href="https://www.youtube.com/watch?v=75GPsmB58sA" target="_blank">XXXTENTACION</a>
+                                                                                                                        </div>
+                                                                                                                        <div id="a20">
+                                                                                                                                <a href="https://www.youtube.com/watch?v=P9v_yA85a1M" target="_blank">Brennan Savage</a>
+                                                                                                                                </div>
+                                                                                                                                <div id="a21">
+                                                                                                                                        <a href="https://www.youtube.com/watch?v=tdVobP7DegY" target="_blank">Agalloch</a>
+                                                                                                                                        </div>
+                                                                                                                                <div id="back">
+                                                                                                                                        <a href="hub">back</a>
+                                                                                                                                        </div>
+            <div id="back">
+                <a href="hub">back</a>
+                </div>
+                <script  src="assets/scripts/script.js"></script>
+                </div>
+	</body>
+</html>
+
+

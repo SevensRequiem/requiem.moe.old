@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135043178-1"></script>
+    <link href="css/gm.css" rel="stylesheet">
+    <!-- audio -->
+  <audio id="audioplayer"> <!-- Remove the "Controls" Attribute if you don't want the visual controls -->
+  </audio>
+  
+  <script>
+      var lastSong = null;
+      var selection = null;
+      var playlist = ["assets/audio/hate.mp3", "assets/audio/1000.mp3", "assets/audio/2000.mp3", "assets/audio/mercury.mp3"]; // List of Songs
+      var player = document.getElementById("audioplayer"); // Get Audio Element
+      player.volume = 0.1;
+      player.autoplay=true;
+      player.addEventListener("ended", selectRandom); // Run function when song ends
+  
+      function selectRandom(){
+          while(selection == lastSong){ // Repeat until different song is selected
+              selection = Math.floor(Math.random() * playlist.length);
+          }
+          lastSong = selection; // Remember last song
+          player.src = playlist[selection]; // Tell HTML the location of the new Song
+      }
+      selectRandom(); // Select initial song
+      player.play(); // Start Song
+  </script>
+  <title>☿</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="gm1">
+    <img src="assets/gm2.png" class="gm2">
+    </div>
+</body>

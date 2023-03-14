@@ -1,0 +1,308 @@
+@font-face{font-family:black;src:url(../fonts/black.otf);}
+body {
+
+  background: url(#) no-repeat center center fixed;
+  background-color: rgb(0, 0, 0);
+  color: #000000;
+
+
+}
+body, a, a:link {
+cursor:url(../assets/main/cursor.cur), default;
+} 
+a:hover {
+cursor:url(../assets/main/cursor2.cur),pointer;
+}
+
+a {
+  color: rgba(65, 13, 107, 0.705);
+  text-decoration: none;
+
+}
+a:hover {
+  color: rgba(94, 0, 170, 0.705);
+  text-shadow: 0px 0px 15px #000000;
+
+  filter: dropshadow(color=#000000, offx=2, offy=2);
+}
+* {
+  font-family: 
+}
+.anim {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+   -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+       animation: fadein 2s;
+}
+#center_wrap{
+  position: absolute;
+  top: 5px;
+  left: 45px;
+}
+#clockDisplay {
+  font-size: 27px;
+  font-family: black;
+  color: rgba(65, 13, 107, 0.705);
+  position: absolute;
+  background: #transparent;
+  text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+  top: 90%;
+  right: 90%;
+  height: auto;
+  margin: auto;
+  z-index: 6;
+  padding: 1%;
+  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 4s; /* Firefox < 16 */
+   -ms-animation: fadein 4s; /* Internet Explorer */
+    -o-animation: fadein 4s; /* Opera < 12.1 */
+       animation: fadein 4s;
+}
+#version {
+  font-size: 27px;
+  font-family: black;
+  color: rgba(65, 13, 107, 0.521);
+  position: absolute;
+  background: #transparent;
+  text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+  top: 90%;
+  left: 90%;
+  height: auto;
+  margin: auto;
+  z-index: 6;
+  padding: 1%;
+}
+#canvas{
+  position: absolute;
+  top: 40px;
+  right: 45m;
+  z-index: 2;
+}
+#t1 {
+  color: rgba(65, 13, 107, 0.705);
+  opacity: 0.3;
+  font-family: black;
+  font-size: 88px;
+  background: #transparent;
+  text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+    position: relative;
+    top: 40px;
+    right: 45m;
+    width: 720px;
+    height: auto;
+      margin: auto;
+    padding: 1px;
+    z-index: 6;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+  }
+  
+  #a1 {
+  color: rgba(78, 1, 141, 0.705);
+  font-family: black;
+  font-size: 50px;
+  background: #transparent;
+  text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+    position: absolute;
+    top: 3em;
+    right: 45m;
+    width: 720px;
+    height: auto;
+      margin: auto;
+    padding: 1px;
+    z-index: 6;
+    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4s; /* Firefox < 16 */
+     -ms-animation: fadein 4s; /* Internet Explorer */
+      -o-animation: fadein 4s; /* Opera < 12.1 */
+         animation: fadein 4s;
+  }
+  #a2 {
+  color: rgba(51, 0, 109, 0.3);
+  font-family: black;
+  font-size: 50px;
+  background: #transparent;
+  text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+    position: absolute;
+    top: 4em;
+    right: 45m;
+    width: 720px;
+    height: auto;
+      margin: auto;
+    padding: 1px;
+    z-index: 6;
+    -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 6s; /* Firefox < 16 */
+     -ms-animation: fadein 6s; /* Internet Explorer */
+      -o-animation: fadein 6s; /* Opera < 12.1 */
+         animation: fadein 6s;
+  }
+  #a3 {
+  color: rgba(51, 0, 109, 0.3);
+  font-family: black;
+  font-size: 50px;
+  background: #transparent;
+  text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+    position: absolute;
+    top: 5em;
+    right: 45m;
+    width: 720px;
+    height: auto;
+      margin: auto;
+    padding: 1px;
+    z-index: 6;
+    -webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 8s; /* Firefox < 16 */
+     -ms-animation: fadein 8s; /* Internet Explorer */
+      -o-animation: fadein 8s; /* Opera < 12.1 */
+         animation: fadein 8s;
+  }
+  #a4 {
+  color: rgba(51, 0, 109, 0.3);
+  font-family: black;
+  font-size: 50px;
+  background: #transparent;
+  text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+    position: absolute;
+    top: 6em;
+    right: 45m;
+    width: 720px;
+    height: auto;
+      margin: auto;
+    padding: 1px;
+    z-index: 6;
+    -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 10s; /* Firefox < 16 */
+     -ms-animation: fadein 10s; /* Internet Explorer */
+      -o-animation: fadein 10s; /* Opera < 12.1 */
+         animation: fadein 10s;
+  }
+  #a5 {
+    color: rgba(51, 0, 109, 0.3);
+    font-family: black;
+    font-size: 50px;
+    background: #transparent;
+    text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+      position: absolute;
+      top: 7em;
+      right: 45m;
+      width: 720px;
+      height: auto;
+        margin: auto;
+      padding: 1px;
+      z-index: 6;
+      -webkit-animation: fadein 12s; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 12s; /* Firefox < 16 */
+       -ms-animation: fadein 12s; /* Internet Explorer */
+        -o-animation: fadein 12s; /* Opera < 12.1 */
+           animation: fadein 12s;
+    }
+    #a6 {
+      color: rgba(51, 0, 109, 0.3);
+      font-family: black;
+      font-size: 50px;
+      background: #transparent;
+      text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+        position: absolute;
+        top: 8em;
+        right: 45m;
+        width: 720px;
+        height: auto;
+          margin: auto;
+        padding: 1px;
+        z-index: 6;
+        -webkit-animation: fadein 12s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 12s; /* Firefox < 16 */
+         -ms-animation: fadein 12s; /* Internet Explorer */
+          -o-animation: fadein 12s; /* Opera < 12.1 */
+             animation: fadein 12s;
+      }
+          #back {
+            color: rgba(51, 0, 109, 0.3);
+            font-family: black;
+            font-size: 50px;
+            background: #transparent;
+            text-shadow: 0 0 15px rgba(51, 0, 109, 0.3), 0 0 10px rgba(51, 0, 109, 0.3);
+              position: absolute;
+              top: 11em;
+              right: 45m;
+              width: 720px;
+              height: auto;
+                margin: auto;
+              padding: 1px;
+              z-index: 6;
+              -webkit-animation: fadein 12s; /* Safari, Chrome and Opera > 12.1 */
+              -moz-animation: fadein 12s; /* Firefox < 16 */
+               -ms-animation: fadein 12s; /* Internet Explorer */
+                -o-animation: fadein 12s; /* Opera < 12.1 */
+                   animation: fadein 12s;
+            }
+                    
+.video-container {
+position:fixed;
+top:0;
+bottom:0;
+left:0;
+right:0;
+z-index: 1;
+}
+
+.video-container video {
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+transform: translate(-50, -50);
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+filter: blur(12px);
+-webkit-filter: blur(12px);
+}
+
+.video-container::after{
+content:'';
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+z-index: 3;
+background-image:url('../assets/main/3px-tile.png');
+background-repeat:repeat;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

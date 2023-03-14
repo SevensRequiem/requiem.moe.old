@@ -1,0 +1,23 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteCond %{HTTP_USER_AGENT} ^.*(SCspider|Textbot|s2bot|Python-urllib|YandexBot|Nimbostratus-Bot|bot|Googlebot).*$ [NC]
+RewriteCond %{HTTP_USER_AGENT} ^-?$
+RewriteRule .* - [F,L]
+
+# ---- Render pages without urls
+Options +MultiViews
+
+ErrorDocument 404 https://sevens.ga/404.html
+ErrorDocument 403 https://sevens.ga/403.html
+
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_value docref_root 0
+php_value docref_ext 0
+<Files "ips.txt">  
+  Require all denied
+</Files>
+RewriteRule /?\.htaccess$ - [F,L]
+Options -Indexes

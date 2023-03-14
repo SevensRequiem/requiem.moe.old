@@ -1,0 +1,163 @@
+html, body {
+  height: 100%;
+}
+body, a, a:link {
+  cursor:url(../cursor.cur), default;
+} 
+a:hover {
+  cursor:url(../cursor2.cur),pointer;
+}
+.bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/1.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}   
+#t1 {
+  color: rgba(16, 0, 104, 0.3);
+font-size: 77px;
+background: #transparent;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+  position: absolute;
+  top: 5m;
+  left: 1m;
+  width: 720px;
+  height: auto;
+    margin: auto;
+  padding: 1px;
+  z-index: 6;
+  -webkit-animation: text-flicker-in-glow 3s linear both;
+            animation: text-flicker-in-glow 3s linear both;
+}
+
+#byt {
+  color: rgba(16, 0, 104, 0.3);
+font-size: 40px;
+background: #transparent;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  width: 720px;
+  height: auto;
+    margin: auto;
+    z-index: 6;
+  padding: 1px;ext-flicker-in-glow 3s linear both;
+  animation: text-flicker-in-glow 3s linear both;
+}
+#bst {
+  color: rgba(16, 0, 104, 0.3);
+font-size: 40px;
+background: #transparent;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+  position: absolute;
+  top: 4em;
+  left: 3em;
+  width: 720px;
+  height: auto;
+    margin: auto;
+  padding: 1px;
+  z-index: 6;
+  -webkit-animation: text-flicker-in-glow 3s linear both;
+  animation: text-flicker-in-glow 3s linear both;
+}
+#bds {
+  color: rgba(16, 0, 104, 0.3);
+font-size: 40px;
+background: #transparent;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+  position: absolute;
+  top: 5em;
+  left: 3em;
+  width: 720px;
+  height: auto;
+    margin: auto;
+  padding: 1px;
+  z-index: 6;
+  -webkit-animation: text-flicker-in-glow 3s linear both;
+  animation: text-flicker-in-glow 3s linear both;
+}
+#bml {
+  color: rgba(16, 0, 104, 0.3);
+font-size: 40px;
+background: #transparent;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+  position: absolute;
+  top: 6em;
+  left: 3em;
+  width: 720px;
+  height: auto;
+    margin: auto;
+  padding: 1px;
+  z-index: 6;
+    -webkit-animation: text-flicker-in-glow 3s linear both;
+            animation: text-flicker-in-glow 3s linear both;
+}
+#hub {
+  color: rgba(16, 0, 104, 0.3);
+  font-size: 40px;
+  background: #transparent;
+  text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+    position: absolute;
+    top: 7em;
+    left: 3em;
+    width: 720px;
+    height: auto;
+      margin: auto;
+    padding: 1px;
+    z-index: 6;
+      -webkit-animation: text-flicker-in-glow 3s linear both;
+              animation: text-flicker-in-glow 3s linear both;
+  }
+#discord {
+  color: rgba(16, 0, 104, 0.3);
+  font-size: 77px;
+  background: #transparent;
+  text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+    position: absolute;
+    top: 5m;
+    left: 4.5em;
+    width: 720px;
+    height: auto;
+    margin: auto;
+    padding: 1px;
+    z-index: 6;
+    -webkit-animation: text-flicker-in-glow 3s linear both;
+    animation: text-flicker-in-glow 3s linear both;
+  }
+  .video-container {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 1;
+    }
+    
+    .video-container video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translate(-50, -50);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+    }
+    
+    .video-container::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-image:url('../media/3px-tile.png');
+    background-repeat:repeat;
+    }
